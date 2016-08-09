@@ -1,3 +1,86 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	position: relative;
+}
+
+*{box-sizing: border-box;}
+
+// START nav bar styling
+.projectName a {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 2em;
+	text-decoration: none;
+	display: block;
+	padding-top: 5px;
+	color: white;
+}
+
+.navbar-collapse.collapse.in {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar-header {
+	background-color: black;
+}
+
+.navbar-nav {
+	float: right;
+	background-color: black;
+	font-family: "Source Sans Pro", sans-serif;
+	text-decoration: none
+
+}
+
+.navbar-inverse {
+	background-color: black;
+}
+
+.navbar-collapse li {
+	padding-right: 10px; 
+	padding-top: 15px; 
+
+}
+
+.navbar-collapse a{
+	color: white;  
+}
+
+/*END Navigation bar*/
+
+
+/*START Footer styling*/
+
+footer {	
+	background-color: grey;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+footer p {
+	text-transform: uppercase;
+}
+
+/*END Footer styling*/
+
+
+// START Hero image styling
+.img-responsive { 
+   position: relative; 
+   margin: auto;
+   // width: 100%; 
+}
+
+.image h1 { 
+   position: absolute; 
+   top: 130px; 
+   left: 0; 
+   color: white; 
+   font-family: "Source Sans Pro", sans-serif;   
+   letter-spacing: -1px;  
+   font-size: 3em;
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+   padding-left: 5%;
+}
+
