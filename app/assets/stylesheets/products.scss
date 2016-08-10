@@ -3,14 +3,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // START styling product table
-table{
-	width: 100%;
+// table{
+// 	width: 100%;
+// }
+
+// th, td {
+//    	padding: 15px;
+//     	text-align: left;
+// 	font-family: "Source Sans Pro", sans-serif;
+// 	font-size: 1.5em;
+// 	vertical-align: bottom;
+// }
+
+// Start styling fonts
+#productlist{
+	font-family: "Source Sans Pro", sans-serif;
+
 }
 
-th, td {
-   	padding: 15px;
-    	text-align: left;
-	font-family: "Source Sans Pro", sans-serif;
-	font-size: 1.5em;
-	vertical-align: bottom;
+#productlist h1{
+	font-size: 2.5em;
+	margin-left: 35px;
 }
+
+#productlist p{
+	font-size: 1em;
+	margin-left: 35px;
+}
+
+.img-responsive{
+	width: 350px;
+}
+
