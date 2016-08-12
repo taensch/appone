@@ -84,3 +84,19 @@ footer p {
    padding-left: 5%;
 }
 
+// END Hero image styling
+
+// START carousel styling
+#carouselpic{
+	width: 600px;
+}
+
+.carousel-caption{
+	font-family: "Source Sans Pro", sans-serif;   
+   	letter-spacing: -1px;
+   	font-size: 1.5em;
+}
+
+.carousel-control.left, .carousel-control.right {
+  background: none;
+ }
