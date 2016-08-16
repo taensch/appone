@@ -33,6 +33,10 @@
             <li><p><%= link_to "Buy MonTé", products_path %> </p></li>
             <li><p><%= link_to "Contact", static_pages_contact_path %></p></li>
             </ul>
+            <%= form_tag("/products", method: "get") do %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search") %>
+            <% end %>
       </div> <!-- nav -->
   </div> <!-- end nav container-->
 </nav> <!-- end navbar-->

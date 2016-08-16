@@ -45,7 +45,11 @@ body {
 	color: white;  
 }
 
-/*END Navigation bar*/
+.searchfield{
+	border-radius: 5px;
+}
+
+// END Navigation bar
 
 
 /*START Footer styling*/
@@ -100,3 +104,29 @@ footer p {
 .carousel-control.left, .carousel-control.right {
   background: none;
  }
+
+// END carousel styling
+
+
+// START contact form styling
+
+#sidebar { 
+   position: absolute; 
+   top: 1050px; 
+   left: 0; 
+   color: white; 
+   font-family: "Source Sans Pro", sans-serif;   
+   letter-spacing: -1px;  
+   font-size: 3em;
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+   padding-left: 5%;
+}
+
+
+#contactform{
+	margin: 0 auto; 
+	margin-left: 600px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
