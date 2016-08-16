@@ -32,19 +32,26 @@
             <li><p><%= link_to "About", static_pages_about_path %></p></li>
             <li><p><%= link_to "Buy MonTé", products_path %> </p></li>
             <li><p><%= link_to "Contact", static_pages_contact_path %></p></li>
+             <li><p><% if user_signed_in? %>
+                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  <% else %>
+                    <%= link_to('Login', new_user_session_path) %>
+                  <% end %><p></li>
             </ul>
-            <%= form_tag("/products", method: "get") do %>
-              <%= text_field_tag(:q) %>
-              <%= submit_tag("Search") %>
-            <% end %>
       </div> <!-- nav -->
   </div> <!-- end nav container-->
 </nav> <!-- end navbar-->
-
+<%= flash[:notice] %>
 <%= yield %>
 
 <footer>
 <p> &copy; Tanja Savanin 2016 </p>
+
+<p><%= form_tag("/products", method: "get") do %>
+              <%= text_field_tag(:q)%>
+              <%= submit_tag("Search") %>
+            <% end %><p>
+      
 </footer>
 
 </body>
