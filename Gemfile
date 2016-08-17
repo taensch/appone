@@ -52,6 +52,8 @@ group :production do
   gem 'pg'
 end
 
-#Add devise jam that helps implement user authentification
+#Add devise gem that helps implement user authentication
 gem 'devise'
 
+#Add CanCanCan  gem that helps manage authorization
+gem 'cancancan'

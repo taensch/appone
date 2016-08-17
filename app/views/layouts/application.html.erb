@@ -44,6 +44,14 @@
 <%= flash[:notice] %>
 <%= yield %>
 
+<!-- Alerts and Notices -->
+<% if alert %>
+<div class="alert alert-info" role="alert"><%= alert %></div> <% end %>
+
+<% if notice %>
+<div class="alert alert-warning" role="alert"><%= notice %></div> <% end %>
+
+
 <footer>
 <p> &copy; Tanja Savanin 2016 </p>
 
