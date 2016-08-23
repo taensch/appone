@@ -9,6 +9,8 @@
 
 <div class="row">
       <div class="col-md-6">
+         <p><strong>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p></strong><br>
+          
           <p><strong>Description:</strong>
           <%= @product.description %>
           </p> <br>
@@ -20,7 +22,9 @@
           <p><strong>Price:</strong>
               <%= @product.price %>
             </p> <br>
-          <p><%= @product.highest_rating_comment %></p>
+          <!-- <p><%= @product.highest_rating_comment %></p> -->
+          <p><%= render partial: 'comments' %></p>
+          <p><%=render partial: 'new_comment'%></p>
           <p><%= link_to 'Edit', edit_product_path(@product) %></p>
           <p><%= link_to 'Back', products_path %></p>
       </div>  
