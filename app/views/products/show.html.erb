@@ -23,9 +23,17 @@
               <%= @product.price %>
             </p> <br>
           <!-- <p><%= @product.highest_rating_comment %></p> -->
+          <p><strong>What other tea lovers had to say:</strong></p>
           <p><%= render partial: 'comments' %></p>
           <p><%=render partial: 'new_comment'%></p>
           <p><%= link_to 'Edit', edit_product_path(@product) %></p>
           <p><%= link_to 'Back', products_path %></p>
       </div>  
+
+      <div class="digg_pagination col-md-12">
+        <div class="page_info">
+        <p><%= page_entries_info @comments %></p>
+        </div>
+        <p><%= will_paginate @comments %></p>
+  </div>
 </div> <!-- end row -->

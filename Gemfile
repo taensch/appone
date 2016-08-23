@@ -57,3 +57,6 @@ gem 'devise'
 
 #Add CanCanCan  gem that helps manage authorization
 gem 'cancancan'
+
+#Add Pagination gem that help to retrieve only part of data and split to two pages
+gem 'will_paginate', '~> 3.1.0'

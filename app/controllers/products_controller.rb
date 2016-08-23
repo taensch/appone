@@ -14,9 +14,9 @@ end
 
   # GET /products/1
   # GET /products/1.json
-def show
-  @comments = @product.comments.order("created_at DESC")
-end
+  def show
+    @comments = @product.comments.all.order("rating DESC").paginate(:page => params[:page], :per_page => 2)
+  end
 
   # GET /products/new
   def new
