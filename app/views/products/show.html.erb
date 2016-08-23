@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
- 
+
 <div class="row">
       <div class="col-md-6 indvproduct">
         <%=image_tag(@product.image_url, class: "img-responsive", id: "showproductpic") %>
@@ -36,4 +35,5 @@
         </div>
         <p><%= will_paginate @comments %></p>
       </div> <!-- end digg_pagination -->
+
 </div> <!-- end row -->

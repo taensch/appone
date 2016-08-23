@@ -41,7 +41,7 @@
       </div> <!-- nav -->
   </div> <!-- end nav container-->
 </nav> <!-- end navbar-->
-<%= flash[:notice] %>
+
 <%= yield %>
 
 <!-- Alerts and Notices -->
@@ -51,7 +51,6 @@
 <% if notice %>
 <div class="alert alert-warning" role="alert"><%= notice %></div> <% end %>
 
-
 <footer>
 <p> &copy; Tanja Savanin 2016 </p>
 
@@ -59,7 +58,7 @@
               <%= text_field_tag(:q)%>
               <%= submit_tag("Search") %>
             <% end %><p>
-      
+
 </footer>
 
 </body>

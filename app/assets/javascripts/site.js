@@ -1,4 +1,4 @@
-$(document).on('ready page:load', function() {
+document.addEventListener("turbolinks:load", function() {
     $('.rating').raty({
         path: '/assets',
         scoreName: 'comment[rating]'
@@ -10,4 +10,4 @@ $(document).on('ready page:load', function() {
             return $(this).attr('data-score');
         }
     });
-});
+})
