@@ -22,7 +22,7 @@
           <p><strong>Price:</strong>
               <%= @product.price %>
             </p> <br>
-          <!-- <p><%= @product.highest_rating_comment %></p> -->
+         
           <p><strong>What other tea lovers had to say:</strong></p>
           <p><%= render partial: 'comments' %></p>
           <p><%=render partial: 'new_comment'%></p>
@@ -35,5 +35,5 @@
         <p><%= page_entries_info @comments %></p>
         </div>
         <p><%= will_paginate @comments %></p>
-  </div>
+      </div> <!-- end digg_pagination -->
 </div> <!-- end row -->
