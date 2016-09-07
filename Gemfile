@@ -60,3 +60,8 @@ gem 'cancancan'
 
 #Add Pagination gem that help to retrieve only part of data and split to two pages
 gem 'will_paginate', '~> 3.1.0'
+
+#Add rspec for testing
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
