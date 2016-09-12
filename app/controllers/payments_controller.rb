@@ -14,7 +14,6 @@ class PaymentsController < ApplicationController
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
-        :receipt_email => email
         )
 
       if charge.paid
@@ -29,6 +28,6 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
       end
 
-    redirect_to @product
+    redirect_to product_path(@product)
   end
 end
