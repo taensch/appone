@@ -61,10 +61,14 @@ gem 'cancancan'
 #Add Pagination gem that help to retrieve only part of data and split to two pages
 gem 'will_paginate', '~> 3.1.0'
 
-#Add rspec for testing
+#Add rspec for testing and facroty girl for testing data
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 #Add functional test
 gem 'rails-controller-testing'
+
+#Add payment with stripe
+gem 'stripe'
