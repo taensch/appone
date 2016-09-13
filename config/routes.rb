@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
   
   post 'payments/create'
+  get 'static_pages/payment_successful'
   
   get 'static_pages/about'
 

@@ -36,7 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug', platform: :mri
 end
 
 group :development do
@@ -72,3 +72,6 @@ gem 'rails-controller-testing'
 
 #Add payment with stripe
 gem 'stripe'
+
+#Add brakeman for security checks
+gem "brakeman", :require => false
