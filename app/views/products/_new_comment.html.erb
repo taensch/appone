@@ -1,26 +1,23 @@
 <% if signed_in? %>
 <div class="row">
-  <div class="col-md-12">
-    <p>Add a review:</p>
-  </div>
+    <div class="col-md-12">
+      <p>Add a review:</p>
+    </div> <!-- end col -->
     
-  
-
-    <!-- <div class="col-md-12"> -->
     <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
     <p>
-      <%= f.label :body, "Comments" %>
-      <br>
-      <%= f.text_area :body %>
+        <%= f.label :body, "Comments" %>
+        <br>
+        <%= f.text_area :body %>
     </p>
-  <!-- </div> -->
-    <p>
+    
+    <p> 
       <div class="rating ratingsub col-md-12"></div>
     </p>
-  <!-- <div class="col-md-12"> -->
-  <p><%= f.submit "Submit" %></p>
-  <% end %>
-  <% end %>
-  <!-- </div> -->
- 
+    <p>
+       <%= f.submit "Submit" %>
+    </p>
+    <% end %>
+    <% end %>
 </div> <!-- end row -->
+
