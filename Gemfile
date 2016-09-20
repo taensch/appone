@@ -76,5 +76,12 @@ gem 'stripe'
 #Add brakeman for security checks
 gem "brakeman", :require => false
 
-#Add dalli for caching
+#Add dalli & memcachier for caching
 gem 'dalli'
+gem 'memcachier'
+
+# Add Redis for Key-value store
+gem 'redis-rails'
+
+# Use New Relic for monitoring
+gem 'newrelic_rpm'
