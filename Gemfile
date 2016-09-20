@@ -75,3 +75,6 @@ gem 'stripe'
 
 #Add brakeman for security checks
 gem "brakeman", :require => false
+
+#Add dalli for caching
+gem 'dalli'
