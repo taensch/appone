@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   resources :orders, only: [:index, :show, :create, :destroy]
   
-  post 'payments/create'
+  
   get 'static_pages/payment_successful'
   
   get 'static_pages/about'
@@ -16,16 +16,24 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
+  get 'static_pages/thank_you'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  
+  # Contact Message goes here
+  post 'static_pages/thank_you'
+  
+  post 'payments/create'
+  
   # You can have the root of your site routed with "root"
- root 'static_pages#landing_page'
+  root 'static_pages#landing_page'
 
-# Contact Message goes here
- post 'static_pages/thank_you'
+  #For Rails 5
+  mount ActionCable.server => '/cable'
 
- get 'static_pages/thank_you'
+
+
  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
