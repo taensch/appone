@@ -97,3 +97,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Try to fix bug 
 gem 'actioncable'
+
+ruby "2.2.4"
