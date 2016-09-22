@@ -15,6 +15,10 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+#
+ActiveSupport.halt_callback_chains_on_return_false = false
+
+
 module Appone
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -34,6 +38,7 @@ module Appone
 
     #For Redis installation
     config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+    
 
   end
 end
