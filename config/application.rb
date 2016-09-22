@@ -7,6 +7,10 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 ActiveSupport.halt_callback_chains_on_return_false = false
 
+#
+ActiveSupport.halt_callback_chains_on_return_false = false
+
+
 module Appone
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -15,25 +19,8 @@ module Appone
   end
 end
 
-# require File.expand_path('../boot', __FILE__)
 
-# require "rails"
-# # Pick the frameworks you want:
-# require "active_model/railtie"
-# require "active_job/railtie"
-# require "active_record/railtie"
-# require "action_controller/railtie"
-# require "action_mailer/railtie"
-# require "action_view/railtie"
-# require "sprockets/railtie"
-# require "action_cable"
-# # require "rails/test_unit/railtie"
-
-# # Require the gems listed in Gemfile, including any gems
-# # you've limited to :test, :development, or :production.
-# Bundler.require(*Rails.groups)
-
-# #Upgrade to Rails 5
+# Upgrade to Rails 5
 # ActiveSupport.halt_callback_chains_on_return_false = false
 
 
