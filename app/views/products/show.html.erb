@@ -31,6 +31,9 @@
           <p><%= link_to 'Back', products_path %></p>
          
           <p><strong>What other tea lovers had to say:</strong></p>
+          
+          <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+          
           <p><%= render partial: 'comments' %></p>
           <p><%=render partial: 'new_comment'%></p>
 

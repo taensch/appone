@@ -85,6 +85,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # allow ActionCable requests on production
+  config.web_socket_server_url = "wss://teatime-monte.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://teatime-monte.herokuapp.com', 'https://teatime-monte.herokuapp.com']
   
 end
 
