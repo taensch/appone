@@ -4,10 +4,11 @@ class CommentsController < ApplicationController
    @product = Product.find(params[:product_id])
    @comment = @product.comments.new(comment_params)
    @comment.user = current_user
-   @user = current_user
+   
 
   respond_to do |format|
       if @comment.save
+        ProductChannel.broadcast_to @comment.product_id, comment: render_comment(@comment, current_user)
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
         format.js
@@ -31,4 +32,8 @@ end
     params.require(:comment).permit(:user_id, :body, :rating)
    end
    
+  def render_comment(comment, current_user)
+    CommentsController.render(partial: 'comments/comment', locals: {comment: comment, current_user: current_user })
+  end
+
 end

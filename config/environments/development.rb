@@ -54,4 +54,6 @@ Rails.application.configure do
 
   # generate plain JavaScript files instead of CoffeeScript
   config.app_generators.javascript_engine = :javascript
+
+  config.action_cable.allowed_request_origins = ['http://localhost:3000']
 end
