@@ -32,10 +32,16 @@
 #showproductpic{
 	width:600px; 
 	margin-left: 20px;
+
+}
+
+.info {
+	margin-top: 90px; 
 }
 
 .indvproduct{
 	margin-top: 60px;
+	padding-bottom: 30px;
 }
 
 .indvproduct h1{ 
@@ -74,6 +80,10 @@ margin-left: 1.5em;
 	padding-left: 2.5em;
 }
 
+.stripe-button-el{
+	margin-left: 20px;
+}
+
 // .pagination{
 // 	margin-left: 2em;
 // }
@@ -82,4 +92,26 @@ margin-left: 1.5em;
 // 	margin-left: 2em;
 // }
 // END product show styling
+
+// START editing comments
+.ratingsub{
+	padding-left: 20px;
+	padding-bottom: 30px;
+}
+
+.newreview{
+	padding-left: 0px;
+}
+
+.userreview{
+	margin-left: 0px; 
+}
+
+.pagination{
+	padding-left: 20px; 
+}
+
+.digg_pagination{
+	margin-left: 20px; 
+}
 

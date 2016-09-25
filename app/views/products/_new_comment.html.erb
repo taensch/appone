@@ -1,7 +1,7 @@
 <% if signed_in? %>
 <div class="row">
-    <div class="col-md-12">
-      <p>Add a review:</p>
+    <div class="newreview col-md-12">
+      <strong><p>Add a review yourself:</p></strong>
     </div> <!-- end col -->
     
     <%= form_for([@product, @product.comments.build], remote: true) do |f| %>

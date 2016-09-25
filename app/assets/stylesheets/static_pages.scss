@@ -3,6 +3,7 @@ body {
 	padding-bottom: 150px;
 }
 
+
 *{box-sizing: border-box;}
 
 // START nav bar styling
@@ -52,6 +53,26 @@ body {
 
 // END Navigation bar
 
+// START wrap styling
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 130px; /* must be same height as the footer */
+}
+
+// END wrap styling
 
 /*START Footer styling*/
 
@@ -67,9 +88,29 @@ footer {
 
 footer p {
 	text-transform: uppercase;
+	font-family: "Source Sans Pro", sans-serif;
+
 }
 
+footer {
+  position: relative;
+  margin-top: -130px; /* negative value of footer height */
+  // height: 130px;
+  clear: both;
+} 
+
 /*END Footer styling*/
+
+// START alert/notice styling
+.alert{
+margin-top: 20px;
+text-align: center;
+color: white;
+background-color: black;
+font-family: "Source Sans Pro", sans-serif;
+font-size: 1.2em;
+}
+//END alter/notice styling 
 
 
 // START Hero image styling
@@ -110,7 +151,15 @@ footer p {
 
 // END carousel styling
 
+//START form styling 
 
+.field p{
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#registernow{
+	margin-top:150px;
+}
 // START contact form styling
 
 #sidebarcontact { 

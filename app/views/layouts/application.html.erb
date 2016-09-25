@@ -9,6 +9,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
+    <script> window.setTimeout(function() {
+  $(".alert").fadeTo(500, 0).slideUp(500, function(){
+    $(this).remove(); 
+  });
+}, 3000);</script>
   </head>
 <body>
 
@@ -42,15 +47,18 @@
       </div> <!-- nav -->
   </div> <!-- end nav container-->
 </nav> <!-- end navbar-->
+<div id="wrap">
+  <div id="main">
+    <%= yield %>
+    
+    <!-- Alerts and Notices -->
+    <% if alert %>
+    <div class="alert alert-info col-md-offset-4 col-md-4" role="alert"><%= alert %></div> <% end %>
 
-<%= yield %>
-
-<!-- Alerts and Notices -->
-<% if alert %>
-<div class="alert alert-info" role="alert"><%= alert %></div> <% end %>
-
-<% if notice %>
-<div class="alert alert-warning" role="alert"><%= notice %></div> <% end %>
+    <% if notice %>
+    <div class="alert alert-warning col-md-offset-4 col-md-4" role="alert"><%= notice %></div> <% end %>
+  </div>
+</div>
 
 <footer>
 <p> &copy; Tanja Savanin 2016 </p>

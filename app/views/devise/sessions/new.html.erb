@@ -1,6 +1,6 @@
 <div class="row">
-  <h2 id="sidebarlolo">Welcome back Friend!</h2>
-  <div class="col-lg-4" id="registernow">
+  <div class="row"><h2 id="sidebarlolo">Welcome back Friend!</h2></div>
+  <div class="col-lg-offset-5 col-lg-4" id="registernow">
 
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -26,5 +26,5 @@
       <% end %>
       <%= render "devise/shared/links" %>
     </div>
-    </div>
-  </div>
+    </div> <!-- end registernow -->
+  </div> <!-- end row -->

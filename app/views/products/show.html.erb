@@ -1,13 +1,11 @@
 <% cache @product do %>
 <div class="row">
-      <div class="col-md-6 indvproduct">
+      <div class="col-md-6 indvproduct" data-product-id="<%= @product.id %>">
         <%=image_tag(@product.image_url, class: "img-responsive img-zoom",  data_zoom_image: @product.image_url, id: "showproductpic") %>
          <span><h1><%= @product.name %></h1></span>
       </div>
-</div>
 
-<div class="row" data-product-id="<%= @product.id %>">
-      <div class="col-md-6">
+      <div class="info col-md-6">
          <p><strong>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p></strong><br>
           
           <p><strong>Description:</strong>
@@ -16,35 +14,41 @@
 
           <p><strong>Color:</strong>
               <%= @product.color %>
-            </p><br>
+          </p><br>
 
           <p><strong>Price:</strong>
-              <%= @product.price %>
-            </p> <br>
+              <%= @product.price %> Euro / 100g
+          </p> <br>
 
-              <%= form_tag "/payments/create" do %>
-              <%= render partial: "shared/stripe_checkout_button" %>
-              <%= hidden_field_tag(:product_id, @product.id) %>
-              <% end %>
-
-          <p><%= link_to 'Edit', edit_product_path(@product) %></p>
+          <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
+          <% end %>
           <p><%= link_to 'Back', products_path %></p>
-         
-          <p><strong>What other tea lovers had to say:</strong></p>
-          
+          <p>
+          <% if current_user && current_user.admin? %>            <%= link_to 'Edit', edit_product_path(@product) %>
+          </p>
+          <% end %>
+       </div> <!-- end col -->
+</div> <!-- end row -->
+
+<div class="row" >
+      <div class="prodcomments col-md-6">
+          <strong>
+           <p>What other tea lovers had to say</p>
+          </strong>
           <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-          
           <p><%= render partial: 'comments' %></p>
           <p><%=render partial: 'new_comment'%></p>
-
-      </div>  
-<% end %> <!-- end caching -->
-
-      <div class="digg_pagination col-md-12">
-        <div class="page_info">
-        <p><%= page_entries_info @comments %></p>
-        </div>
-        <p><%= will_paginate @comments %></p>
-      </div> <!-- end digg_pagination -->
-
+      </div> <!--  end col  -->
 </div> <!-- end row -->
+
+<div class="row" >
+  <div class="digg_pagination col-md-12">
+           <div class="page_info">
+              <p><%= page_entries_info @comments %></p>
+            </div>
+            <p><%= will_paginate @comments %></p>
+  </div> <!-- end digg_pagination -->
+</div> <!-- end row -->
+<% end %> <!-- end caching -->
